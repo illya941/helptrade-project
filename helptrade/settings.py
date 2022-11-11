@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'helptrade.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'helptrade',
+        'USER': 'postgres',
+        'PASSWORD': 'skjUVa654^$%dsy$h$hjH#(75wvhwe42',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
