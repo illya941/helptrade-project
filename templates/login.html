@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-</head>
-<body>
+<div style="text-align:center; margin-top:50px">
 {% load crispy_forms_tags %}
 <h1>Registered Users Only</h1>
 <form method="post">
@@ -12,5 +6,5 @@
     <p>{{ form | crispy }}</p>
     <button type="submit">Log in</button>
 </form>
-</body>
-</html>
+    <a href="{% url 'start' %}">Back to start page</a>
+</div>
