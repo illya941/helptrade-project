@@ -1,1 +1,1 @@
-web: gunicorn helptrade-project.wsgi
+web: gunicorn helptrade.wsgi --log-file –
