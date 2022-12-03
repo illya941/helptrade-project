@@ -1,1 +1,1 @@
-web: gunicorn helptrade.wsgi
+web: gunicorn helptrade-project.wsgi
