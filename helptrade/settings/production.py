@@ -130,10 +130,37 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_TMP = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
+
+os.makedirs(STATIC_TMP, exist_ok=True)
+os.makedirs(STATIC_ROOT, exist_ok=True)
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-
+# $ python manage.py collectstatic --noinput
+#        Unknown command: 'collectstatic'
+#        Type 'manage.py help' for usage.
+#  !     Error while running '$ python manage.py collectstatic --noinput'.
+#        See traceback above for details.
+#        You may need to update application code to resolve this error.
+#        Or, you can disable collectstatic for this application:
+#           $ heroku config:set DISABLE_COLLECTSTATIC=1
+#        https://devcenter.heroku.com/articles/django-assets
+#  !     Push rejected, failed to compile Python app.
+#  !     Push failed
