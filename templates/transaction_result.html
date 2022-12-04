@@ -1,0 +1,10 @@
+{% if request.user.is_authenticated and request.user.first_name %}
+{% include 'navbar.html' %}
+<div style="text-align:center; margin-top:50px">
+    CHANGED | SUCCESS
+    <br><br><br><br>
+    {{url}}
+    <br><br>
+    {{ data }}
+</div>
+{% endif %}

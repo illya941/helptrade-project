@@ -1,0 +1,91 @@
+{% if request.user.is_authenticated and request.user.first_name %}
+{% include 'navbar.html' %}
+<div style="text-align:center">
+    <h1>Заполните форму</h1>
+    <form action="{% url 'reverse' %}">
+        {{market_hash_name1}} (max price:)
+        <input type="text" name="price1" value={{price_max1}}>
+        <br><br>
+        {{market_hash_name2}} (max price:)
+        <input type="text" name="price2" value={{price_max2}}>
+        <br><br>
+        {{market_hash_name3}} (max price:)
+        <input type="text" name="price3" value={{price_max3}}>
+        <br><br>
+        {{market_hash_name4}} (max price:)
+        <input type="text" name="price4" value={{price_max4}}>
+        <br><br>
+        {{market_hash_name5}} (max price:)
+        <input type="text" name="price5" value={{price_max5}}>
+        <br><br>
+        {{market_hash_name6}} (max price:)
+        <input type="text" name="price6" value={{price_max6}}>
+        <br><br>
+        {{market_hash_name7}} (max price:)
+        <input type="text" name="price7" value={{price_max7}}>
+        <br><br>
+        {{market_hash_name8}} (max price:)
+        <input type="text" name="price8" value={{price_max8}}>
+        <br><br>
+        {{market_hash_name9}} (max price:)
+        <input type="text" name="price9" value={{price_max9}}>
+        <br><br>
+        {{market_hash_name10}} (max price:)
+        <input type="text" name="price10" value={{price_max10}}>
+        <br>
+        <input type="hidden" name="purchase" value={{purchase}}>
+        <input type="hidden" name="key" value={{key}}>
+        <input type="hidden" name="name_acc" value={{name_acc}}>
+        <input type="hidden" name="log_pr" value={{log_pr}}>
+        <input type="hidden" name="pass_pr" value={{pass_pr}}>
+        <input type="hidden" name="ip_port" value={{ip_port}}>
+        <input type="hidden" name="acc" value={{num_acc}}>
+        <br><br>
+
+
+        <h2>Копеечник</h2>
+        Введите название предмета:
+        <input type="text" name="cent_name1" value={{cent_name1}}>
+        Мин. цена:
+        <input type="text" name="min_price1" value={{min_price1}}>
+        Макс. цена:
+        <input type="text" name="max_price1" value={{max_price1}}>
+        <br><br>
+
+        Введите название предмета:
+        <input type="text" name="cent_name2" value={{cent_name2}}>
+        Мин. цена:
+        <input type="text" name="min_price2" value={{min_price2}}>
+        Макс. цена:
+        <input type="text" name="max_price2" value={{max_price2}}>
+        <br><br>
+
+        Введите название предмета:
+        <input type="text" name="cent_name3" value={{cent_name3}}>
+        Мин. цена:
+        <input type="text" name="min_price3" value={{min_price3}}>
+        Макс. цена:
+        <input type="text" name="max_price3" value={{max_price3}}>
+        <br><br>
+
+        Введите название предмета:
+        <input type="text" name="cent_name4" value={{cent_name4}}>
+        Мин. цена:
+        <input type="text" name="min_price4" value={{min_price4}}>
+        Макс. цена:
+        <input type="text" name="max_price4" value={{max_price4}}>
+        <br><br>
+
+        Введите название предмета:
+        <input type="text" name="cent_name5" value={{cent_name5}}>
+        Мин. цена:
+        <input type="text" name="min_price5" value={{min_price5}}>
+        Макс. цена:
+        <input type="text" name="max_price5" value={{max_price5}}>
+
+        <br><br>
+        <input type="submit" value="Next">
+        <br><br>
+    </form>
+ </div>
+{% endif %}

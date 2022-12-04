@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if request.user.is_authenticated and request.user.first_name %}
+    <div style="text-align:center">
+        <h1>Заполните форму</h1>
+        <form action="{% url 'set_prices_res1' %}">
+            Выберите номер закупа (1 или 2 или ...):
+            <input type="text" value="" name="number_purchase">
+            <br><br>
+            Key market:
+            <input type="text" value="" name="key_market">
+            <br><br>
+            Курс доллара к рублю (напр: 66.15):
+            <input type="text" value="" name="dollar_rub">
+            <br><br>
+            <input type="submit" value="Next">
+        </form>
+     </div>
+    {% endif %}
+</body>
+</html>

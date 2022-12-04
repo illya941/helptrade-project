@@ -1,0 +1,29 @@
+{% if request.user.is_authenticated and request.user.first_name %}
+{% include 'navbar.html' %}
+<div style="text-align:center">
+    <h1>Заполните форму</h1>
+    <form action="{% url 'sms_set_res' %}">
+        Остановить смс (1 - work, 0 - stop):
+        <input type="text" value="{{work_or_stop}}" name="work_or_stop">
+        <br><br>
+        Your nickname:
+        <input type="text" value="{{nickname}}" name="nickname">
+        <br><br>
+        Key sms:
+        <input type="text" value="{{key_sms}}" name="key_sms">
+        <br><br>
+        Number phone (380...):
+        <input type="text" value="{{phone}}" name="phone">
+        <br><br>
+        Key telegram:
+        <input type="text" value="{{key_tel}}" name="key_tel">
+        <br><br>
+        Chat id:
+        <input type="text" value="{{chat_id}}" name="chat_id">
+        <br><br>
+
+        <br><br>
+        <input type="submit" value="Next">
+    </form>
+ </div>
+{% endif %}

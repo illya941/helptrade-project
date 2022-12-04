@@ -1,0 +1,30 @@
+{% if request.user.is_authenticated and request.user.first_name %}
+{% include 'navbar.html' %}
+<div style="text-align:center">
+    <h1>Заполните форму</h1>
+    <form action="{% url 'purchase' %}">
+
+        Введите ключ:
+        <input type="text" name="key" value={{key}}>
+        <br><br>
+        Имя аккаунта:
+        <input type="text" name="name_acc" value={{name_acc}}>
+        <br><br>
+        Логин прокси:
+        <input type="text" name="log_pr" value={{log_pr}}>
+        <br><br>
+        Пароль прокси:
+        <input type="text" name="pass_pr" value={{pass_pr}}>
+        <br><br>
+        Ип и порт:
+        <input type="text" name="ip_port" value={{ip_port}}>
+        <br><br>
+        Номер закупа:
+        <input type="text" name="purchase" value={{purchase}}>
+        <input type="hidden" name="acc" value={{num_acc}}>
+        <br><br>
+
+        <input type="submit" value="Next">
+    </form>
+ </div>
+{% endif %}

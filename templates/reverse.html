@@ -1,0 +1,26 @@
+{% if request.user.is_authenticated and request.user.first_name %}
+{% include 'navbar.html' %}
+<div style="text-align:center; margin-top:50px">
+    CHANGED | SUCCESS
+    <br><br><br><br>
+    {{name1}} {{max_price1}}
+    <br><br>
+    {{name2}} {{max_price2}}
+    <br><br>
+    {{name3}} {{max_price3}}
+    <br><br>
+    {{name4}} {{max_price4}}
+    <br><br>
+    {{name5}} {{max_price5}}
+    <br><br>
+    {{name6}} {{max_price6}}
+    <br><br>
+    {{name7}} {{max_price7}}
+    <br><br>
+    {{name8}} {{max_price8}}
+    <br><br>
+    {{name9}} {{max_price9}}
+    <br><br>
+    {{name10}} {{max_price10}}
+</div>
+{% endif %}

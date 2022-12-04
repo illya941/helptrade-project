@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-# import dj_database_url
+import dj_database_url
 
 DB_NAME = os.environ.get('DB_NAME')
 DB_USER = os.environ.get('DB_USER')
@@ -34,7 +34,8 @@ SECRET_KEY = SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["helptrade.herokuapp.com/"]
+# ALLOWED_HOSTS = ["helptrade.herokuapp.com/"]
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -95,8 +96,8 @@ DATABASES = {
     }
 }
 
-# db = dj_database_url.config()
-# DATABASES['default'].update(db)
+db = dj_database_url.config()
+DATABASES['default'].update(db)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -136,7 +137,7 @@ USE_TZ = True
 # STATICFILES_DIRS = (BASE_DIR / 'static', )
 # STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 

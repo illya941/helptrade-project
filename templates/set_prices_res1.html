@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if request.user.is_authenticated and request.user.first_name %}
+
+
+
+    <div style="text-align:center">
+        <h1>Заполните форму</h1>
+        <form action="{% url 'set_prices_save' %}">
+
+            {{ skin_name0 }}
+            <input type="text" name="price0" value="{{ skin_price0 }}">
+            <br><br>
+            Цена проданных предметов на стиме (уже проданных!):
+            <br>
+            {% for res in price_sell0 %}
+            {{ res }}
+            <br>
+            {% endfor %}
+            <br>
+            Проданные и купленные вещи на market.csgo:
+            <br>
+            {% for res in sell_buy_market_csgo0 %}
+            {{ res }}
+            <br>
+            {% endfor %}
+            <br>
+            Проданные предметы на market.csgo:
+            <br>
+            {% for res in sold_mar_csgo0 %}
+            {{ res }}
+            <br>
+            {% endfor %}
+            <br>
+            <br><br>
+
+
+            {{ skin_name1 }}
+            <input type="text" name="price1" value="{{ skin_price1 }}">
+            <br><br>
+
+            {{ skin_name2 }}
+            <input type="text" name="price2" value="{{ skin_price2 }}">
+            <br><br>
+            {{ skin_name3 }}
+            <input type="text" name="price3" value="{{ skin_price3 }}">
+            <br><br>
+            {{ skin_name4 }}
+            <input type="text" name="price4" value="{{ skin_price4 }}">
+            <br><br>
+            {{ skin_name5 }}
+            <input type="text" name="price5" value="{{ skin_price5 }}">
+            <br><br>
+            {{ skin_name6 }}
+            <input type="text" name="price6" value="{{ skin_price6 }}">
+            <br><br>
+            {{ skin_name7 }}
+            <input type="text" name="price7" value="{{ skin_price7 }}">
+            <br><br>
+            {{ skin_name8 }}
+            <input type="text" name="price8" value="{{ skin_price8 }}">
+            <br><br>
+            {{ skin_name9 }}
+            <input type="text" name="price9" value="{{ skin_price9 }}">
+            <br><br>
+            <input type="hidden" name="number_purchase" value={{number_purchase}}>
+            <input type="hidden" name="key_market"  value={{key_market}}>
+            <input type="hidden" name="dollar_rub"  value={{dollar_rub}}>
+
+            <input type="submit" value="Next">
+        </form>
+     </div>
+
+    {% endif %}
+
+
+
+</body>
+</html>
