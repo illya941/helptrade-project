@@ -35,7 +35,7 @@ SECRET_KEY = SECRET_KEY
 DEBUG = False
 
 # ALLOWED_HOSTS = ["helptrade.herokuapp.com/"]
-ALLOWED_HOSTS = ["helptrade.herokuapp.com/"]
+ALLOWED_HOSTS = ["helptrade.herokuapp.com"]
 
 # Application definition
 
