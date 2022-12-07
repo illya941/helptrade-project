@@ -1,36 +1,36 @@
 {% if request.user.is_authenticated and request.user.first_name %}
 {% include 'navbar.html' %}
 <div style="text-align:center">
-    <h1>Заполните форму</h1>
+    <h1>Заполните форму (max price:) </h1>
     <form action="{% url 'reverse' %}">
-        {{market_hash_name1}} (max price:)
+        {{market_hash_name1}} <span style="color:red">1.</span>
         <input type="text" name="price1" value={{price_max1}}>
         <br><br>
-        {{market_hash_name2}} (max price:)
+        {{market_hash_name2}} <span style="color:red">2.</span>
         <input type="text" name="price2" value={{price_max2}}>
         <br><br>
-        {{market_hash_name3}} (max price:)
+        {{market_hash_name3}} <span style="color:red">3.</span>
         <input type="text" name="price3" value={{price_max3}}>
         <br><br>
-        {{market_hash_name4}} (max price:)
+        {{market_hash_name4}} <span style="color:red">4.</span>
         <input type="text" name="price4" value={{price_max4}}>
         <br><br>
-        {{market_hash_name5}} (max price:)
+        {{market_hash_name5}} <span style="color:red">5.</span>
         <input type="text" name="price5" value={{price_max5}}>
         <br><br>
-        {{market_hash_name6}} (max price:)
+        {{market_hash_name6}} <span style="color:red">6.</span>
         <input type="text" name="price6" value={{price_max6}}>
         <br><br>
-        {{market_hash_name7}} (max price:)
+        {{market_hash_name7}} <span style="color:red">7.</span>
         <input type="text" name="price7" value={{price_max7}}>
         <br><br>
-        {{market_hash_name8}} (max price:)
+        {{market_hash_name8}} <span style="color:red">8.</span>
         <input type="text" name="price8" value={{price_max8}}>
         <br><br>
-        {{market_hash_name9}} (max price:)
+        {{market_hash_name9}} <span style="color:red">9.</span>
         <input type="text" name="price9" value={{price_max9}}>
         <br><br>
-        {{market_hash_name10}} (max price:)
+        {{market_hash_name10}} <span style="color:red">10.</span>
         <input type="text" name="price10" value={{price_max10}}>
         <br>
         <input type="hidden" name="purchase" value={{purchase}}>
