@@ -2,7 +2,8 @@
 {% include 'navbar.html' %}
 <div style="text-align:center">
     <h1>Заполните форму</h1>
-    <form action="{% url 'changed' %}">
+    <form action="{% url 'changed' %}" method="POST">
+        {% csrf_token %}
         <textarea name="message" cols="150" rows="8">{{json_object}}</textarea>
         <br><br>
         <input type="submit" value="Next">

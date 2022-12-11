@@ -383,7 +383,7 @@ def changed(request):
         response = res.read()
         json_object = json.loads(response)
 
-        message = eval(request.GET['message'])
+        message = eval(request.POST['message'])
 
         with open(f'{username}.json', 'w') as f:
             json.dump(message, f, default=str)
